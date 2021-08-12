@@ -29,3 +29,41 @@ Servlet context path = `/api/v1`
 | **GET** | `/transaction/` | List of all transactions |
 | **POST** | `/transaction/` | Creation of a new transaction |
 | **GET** | `/transaction/search[?amount][?iban][?message]` | Searching in transactions |
+
+# JSON Object Samples
+
+## Customer
+
+```json
+{
+  "name": "Petr",
+  "surname": "Novak",
+  "sex": "MALE",
+  "nationality": "Czech",
+  "birthDate": "2000-01-01",
+  "cardNumber": "5360600185980299",
+  "cardIssueDate": "2020-06-01",
+  "cardExpiryDate": "2023-06-01"
+}
+```
+
+## Account
+
+```json
+{
+  "iban": "CZ6508000000192000145399",
+  "currency": "CZK",
+  "balance": 1500.00
+}
+```
+
+## Transaction
+
+```json
+{
+  "amount": 100.00,
+  "creditorIBAN": "CZ6508000000192000145399",
+  "debtorIBAN": "CZ6508000000192000145400",
+  "message": "Gift of 100CZK"
+}
+```
